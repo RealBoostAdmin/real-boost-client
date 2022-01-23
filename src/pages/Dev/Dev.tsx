@@ -1,8 +1,8 @@
 import Container from 'components/Container';
 import { Navigate } from 'react-router-dom';
+import Loader from 'components/Loader';
+import Button from 'lib/Button';
 import React from 'react';
-import Button from '../../components/Button';
-import Loader from '../../components/Loader';
 
 const Dev: React.FC = () => {
 
@@ -28,11 +28,19 @@ const Dev: React.FC = () => {
         <p>p</p>
         <p className='col-span-9'>Lorem ipsum dolor sit amet consectetur adipiscing</p>
       </div>
+
       <div className='mt-20 flex gap-6 flex-col md:flex-row'>
         <Button onClick={onClick}>primary filled</Button>
         <Button onClick={onClick} variant='secondary'>secondary filled</Button>
         <Button onClick={onClick} style='outlined'>primary outlined</Button>
         <Button onClick={onClick} variant='secondary' style='outlined'>secondary outlined</Button>
+      </div>
+
+      <div className='mt-6 flex gap-6 flex-col md:flex-row'>
+        <Button loading>primary filled</Button>
+        <Button loading variant='secondary'>secondary filled</Button>
+        <Button loading style='outlined'>primary outlined</Button>
+        <Button loading variant='secondary' style='outlined'>secondary outlined</Button>
       </div>
 
       <div className='mt-20 grid grid-cols-5 items-center gap-2'>

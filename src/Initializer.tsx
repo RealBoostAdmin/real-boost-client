@@ -10,7 +10,7 @@ const Initializer: React.FC = ({children}) => {
   }, [])
 
   if (!ready) return (
-    <div className='w-full h-screen flex items-center justify-center'>
+    <div className='w-full h-screen flex items-center justify-center text-red-500'>
       <Loader size='xl'/>
     </div>
   )
