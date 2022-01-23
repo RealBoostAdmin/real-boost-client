@@ -9,14 +9,22 @@ const SliderCards: React.FC = ({children}) => {
   const [distance, setDistance] = useState<number>(0);
   const ref = useRef<HTMLDivElement>(null);
 
-  const onRight = () => {
+  const onRight = (): void => {
     if (translations >= entities - 1) return;
     setTranslations(state => state + 1)
   };
 
-  const onLeft = () => {
+  const onLeft = (): void => {
     if (translations <= 0) return;
     setTranslations(state => state - 1);
+  };
+
+  const leftIsDisabled = (): boolean => {
+    return translations <= 0;
+  };
+
+  const rightIsDisabled = (): boolean => {
+    return translations >= entities - 1;
   };
 
   useEffect(() => {
@@ -45,8 +53,8 @@ const SliderCards: React.FC = ({children}) => {
         {children}
       </div>
       <div className='relative left-0 flex items-center justify-end gap-2 mt-6 max-w-[12rem]'>
-        <Button variant='secondary' style='outlined' onClick={onLeft}><ArrowSmLeftIcon className='w-5'/></Button>
-        <Button variant='secondary' style='outlined' onClick={onRight}><ArrowSmRightIcon className='w-5'/></Button>
+        <Button variant='secondary' style='outlined' onClick={onLeft} disabled={leftIsDisabled()}><ArrowSmLeftIcon className='w-5'/></Button>
+        <Button variant='secondary' style='outlined' onClick={onRight} disabled={rightIsDisabled()}><ArrowSmRightIcon className='w-5'/></Button>
       </div>
     </div>
   );

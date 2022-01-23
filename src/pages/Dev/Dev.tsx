@@ -40,6 +40,13 @@ const Dev: React.FC = () => {
       </div>
 
       <div className='mt-6 flex gap-6 flex-col md:flex-row'>
+        <Button disabled>primary filled</Button>
+        <Button disabled variant='secondary'>secondary filled</Button>
+        <Button disabled style='outlined'>primary outlined</Button>
+        <Button disabled variant='secondary' style='outlined'>secondary outlined</Button>
+      </div>
+
+      <div className='mt-6 flex gap-6 flex-col md:flex-row'>
         <Button loading>primary filled</Button>
         <Button loading variant='secondary'>secondary filled</Button>
         <Button loading style='outlined'>primary outlined</Button>
