@@ -2,6 +2,7 @@ import Container from 'components/Container';
 import { Navigate } from 'react-router-dom';
 import React from 'react';
 import Button from '../../components/Button';
+import Loader from '../../components/Loader';
 
 const Dev: React.FC = () => {
 
@@ -32,6 +33,19 @@ const Dev: React.FC = () => {
         <Button onClick={onClick} variant='secondary'>secondary filled</Button>
         <Button onClick={onClick} style='outlined'>primary outlined</Button>
         <Button onClick={onClick} variant='secondary' style='outlined'>secondary outlined</Button>
+      </div>
+
+      <div className='mt-20 grid grid-cols-5 items-center gap-2'>
+        <div className='w-full flex justify-center'><Loader size='xs'/></div>
+        <div className='w-full flex justify-center'><Loader size='sm'/></div>
+        <div className='w-full flex justify-center'><Loader size='md'/></div>
+        <div className='w-full flex justify-center'><Loader size='lg'/></div>
+        <div className='w-full flex justify-center'><Loader size='xl'/></div>
+        <div className='w-full flex justify-center'><p>xs</p></div>
+        <div className='w-full flex justify-center'><p>sm</p></div>
+        <div className='w-full flex justify-center'><p>md</p></div>
+        <div className='w-full flex justify-center'><p>lg</p></div>
+        <div className='w-full flex justify-center'><p>xl</p></div>
       </div>
     </Container>
   );
