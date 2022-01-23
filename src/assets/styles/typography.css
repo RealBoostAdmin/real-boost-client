@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/Poppins-Light.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Poppins-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Poppins-Medium.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/Poppins-SemiBold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Poppins-Bold.ttf') format('ttf');
+}
+
+h1 {
+  @apply
+  text-2xl leading-snug font-bold
+  lg:text-3xl lg:leading-tight lg:font-bold
+  2xl:text-5xl 2xl:font-bold 2xl:leading-tight;
+}
+
+h2 {
+  @apply
+  text-xl leading-snug font-bold
+  lg:text-2xl lg:leading-snug lg:font-bold
+  2xl:text-4xl 2xl:font-bold 2xl:leading-snug;
+}
+
+h3 {
+  @apply
+  text-lg leading-snug font-bold
+  lg:text-xl lg:leading-normal lg:font-bold
+  2xl:text-3xl 2xl:font-bold 2xl:leading-normal;
+}
+
+h4 {
+  @apply
+  text-base leading-normal font-bold
+  lg:text-lg lg:leading-normal lg:font-semibold
+  2xl:text-2xl 2xl:font-semibold 2xl:leading-normal;
+}
+
+
+h5 {
+  @apply
+  text-sm leading-relaxed font-semibold
+  lg:text-base lg:leading-normal lg:font-semibold
+  2xl:text-xl 2xl:font-semibold 2xl:leading-relaxed;
+}
+
+
+h6 {
+  @apply
+  text-sm leading-relaxed font-semibold
+  lg:text-base lg:leading-normal lg:font-semibold
+  2xl:text-lg 2xl:font-semibold 2xl:leading-relaxed;
+}
+
+p {
+  @apply
+  text-sm leading-relaxed
+  lg:text-base lg:leading-normal
+  2xl:text-lg 2xl:leading-loose;
+}
+
+button {
+  @apply
+  text-xs leading-relaxed font-medium uppercase tracking-wider
+  lg:text-xs lg:leading-normal lg:font-medium
+  2xl:text-sm 2xl:leading-loose 2xl:font-medium;
+}
