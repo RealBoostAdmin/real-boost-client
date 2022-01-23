@@ -19,7 +19,7 @@ interface ProductProps {
 
 const SideNav: React.FC<Props> = ({items}) => {
   return (
-    <div className='fixed w-28 h-screen top-0 left-0 bg-gray-900'>
+    <div className='fixed z-20 w-28 h-screen top-0 left-0 bg-gray-900'>
       {items.map((item, i) => <SideNavItem key={i} {...item} />)}
     </div>
   );

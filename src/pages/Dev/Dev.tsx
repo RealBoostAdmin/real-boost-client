@@ -62,22 +62,22 @@ const Dev: React.FC = () => {
       <div className='mt-20'>
         <SliderCards>
           <div className='w-full md:w-1/3 shrink-0'>
-            <CardGame/>
+            <CardGame name='overwatch' iconURL='' imageURL=''/>
           </div>
           <div className='w-full md:w-1/3 shrink-0'>
-            <CardGame/>
+            <CardGame name='overwatch' iconURL='' imageURL=''/>
           </div>
           <div className='w-full md:w-1/3 shrink-0'>
-            <CardGame/>
+            <CardGame name='overwatch' iconURL='' imageURL=''/>
           </div>
           <div className='w-full md:w-1/3 shrink-0'>
-            <CardGame/>
+            <CardGame name='overwatch' iconURL='' imageURL=''/>
           </div>
           <div className='w-full md:w-1/3 shrink-0'>
-            <CardGame/>
+            <CardGame name='overwatch' iconURL='' imageURL=''/>
           </div>
           <div className='w-full md:w-1/3 shrink-0'>
-            <CardGame/>
+            <CardGame name='overwatch' iconURL='' imageURL=''/>
           </div>
         </SliderCards>
       </div>

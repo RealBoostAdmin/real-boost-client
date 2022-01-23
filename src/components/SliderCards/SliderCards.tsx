@@ -1,3 +1,4 @@
+import { ArrowSmLeftIcon, ArrowSmRightIcon } from '@heroicons/react/outline';
 import React, { CSSProperties, useEffect, useRef, useState } from 'react';
 import Button from 'lib/Button';
 
@@ -35,15 +36,19 @@ const SliderCards: React.FC = ({children}) => {
   }, []);
 
   return (
-    <>
-      <div ref={ref} className={`flex gap-6 transform -translate-x-[var(--trans)] transition-transform`} style={{'--trans': translations * distance + 'px'} as CSSProperties}>
+    <div className='relative'>
+      <div
+        ref={ref}
+        style={{'--trans': translations * distance + 'px'} as CSSProperties}
+        className={`flex gap-6 transform -translate-x-[var(--trans)] transition-transform`}
+      >
         {children}
       </div>
-      <div className='flex items-center justify-end gap-6 mt-6'>
-        <Button variant='secondary' style='outlined' onClick={onLeft}>{'<-'}</Button>
-        <Button variant='secondary' style='outlined' onClick={onRight}>{'->'}</Button>
+      <div className='relative left-0 flex items-center justify-end gap-2 mt-6 max-w-[12rem]'>
+        <Button variant='secondary' style='outlined' onClick={onLeft}><ArrowSmLeftIcon className='w-5'/></Button>
+        <Button variant='secondary' style='outlined' onClick={onRight}><ArrowSmRightIcon className='w-5'/></Button>
       </div>
-    </>
+    </div>
   );
 };
 
