@@ -8,8 +8,8 @@ import React from 'react';
 const Layout: React.FC = () => {
   return (
     <div className='w-full'>
-      <SideNav items={[]}/>
-      <div className='pl-28 w-full flex flex-col min-h-screen'>
+      <div className='hidden lg:block'><SideNav items={[]}/></div>
+      <div className='lg:pl-28 w-full flex flex-col min-h-screen overflow-x-hidden'>
         <MainNav isAuthenticated={false}/>
         <main className='flex w-full flex-grow min-h-full bg-gray-50'>
           <Container>

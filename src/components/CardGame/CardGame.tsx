@@ -8,8 +8,11 @@ interface Props {
 
 const CardGame: React.FC<Props> = ({name, iconURL, imageURL}) => {
   return (
-    <div className='w-full aspect-[16/8] rounded bg-red-500 shadow'>
-      {name}
+    <div className='relative w-full aspect-[16/9] rounded bg-white shadow hover:bg-red-500 transition-colors cursor-pointer group'>
+      <div className='absolute inset-0 bg-gradient-to-br from-transparent to-gray-900 opacity-10'/>
+      <div className='absolute w-auto text-gray-800 uppercase text-xs font-semibold group-hover:text-white -right-8 bottom-2'>
+        <div className='transform origin-top-left -rotate-90'>{name}</div>
+      </div>
     </div>
   );
 };
