@@ -1,12 +1,13 @@
 import Container from 'components/Container';
 import { Navigate } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
 import Loader from 'components/Loader';
 import Button from 'lib/Button';
 import React from 'react';
 
 const Dev: React.FC = () => {
 
-  const onClick = () => console.log('Clicked');
+  const onClick = () => toast.success('Successfully clicked!');
 
   if (process.env.NODE_ENV !== 'development') return <Navigate to='/' />;
 
