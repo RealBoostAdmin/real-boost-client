@@ -1,0 +1,1 @@
+export type Bucket = 'avatars' | 'games' | 'bills';
