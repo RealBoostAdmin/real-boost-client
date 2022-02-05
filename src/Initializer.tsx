@@ -1,17 +1,27 @@
+import { GetGamesItems } from 'core/store/games/games.actions';
 import React, { useEffect, useState } from 'react';
-import Loader from './components/Loader';
+import { useDispatch } from 'react-redux';
+import Loader from 'components/Loader';
 
 const Initializer: React.FC = ({children}) => {
 
+  const dispatch = useDispatch();
   const [ready, setReady] = useState<boolean>(false);
 
   useEffect(() => {
-    setTimeout(() => setReady(true), 3000);
+
+    const onInit = async () => {
+      await dispatch(GetGamesItems());
+      setReady(true);
+    };
+
+    onInit().then();
+
   }, [])
 
   if (!ready) return (
     <div className='w-full h-screen flex items-center justify-center text-red-500'>
-      <Loader size='xl'/>
+      <Loader size='xl' />
     </div>
   )
 
