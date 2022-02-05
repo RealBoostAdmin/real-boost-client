@@ -53,8 +53,8 @@ const SliderCards: React.FC = ({children}) => {
         {children}
       </div>
       <div className='relative left-0 flex items-center justify-end gap-2 mt-6 max-w-[12rem]'>
-        <Button variant='secondary' style='outlined' onClick={onLeft} disabled={leftIsDisabled()}><ArrowSmLeftIcon className='w-5'/></Button>
-        <Button variant='secondary' style='outlined' onClick={onRight} disabled={rightIsDisabled()}><ArrowSmRightIcon className='w-5'/></Button>
+        <Button variant='secondary' design='outlined' onClick={onLeft} disabled={leftIsDisabled()}><ArrowSmLeftIcon className='w-5'/></Button>
+        <Button variant='secondary' design='outlined' onClick={onRight} disabled={rightIsDisabled()}><ArrowSmRightIcon className='w-5'/></Button>
       </div>
     </div>
   );

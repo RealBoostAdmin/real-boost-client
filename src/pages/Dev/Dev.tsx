@@ -36,22 +36,22 @@ const Dev: React.FC = () => {
         <div className='mt-20 flex gap-6 flex-col md:flex-row'>
           <Button onClick={onClick}>primary filled</Button>
           <Button onClick={onClick} variant='secondary'>secondary filled</Button>
-          <Button onClick={onClick} style='outlined'>primary outlined</Button>
-          <Button onClick={onClick} variant='secondary' style='outlined'>secondary outlined</Button>
+          <Button onClick={onClick} design='outlined'>primary outlined</Button>
+          <Button onClick={onClick} variant='secondary' design='outlined'>secondary outlined</Button>
         </div>
 
         <div className='mt-6 flex gap-6 flex-col md:flex-row'>
           <Button disabled>primary filled</Button>
           <Button disabled variant='secondary'>secondary filled</Button>
-          <Button disabled style='outlined'>primary outlined</Button>
-          <Button disabled variant='secondary' style='outlined'>secondary outlined</Button>
+          <Button disabled design='outlined'>primary outlined</Button>
+          <Button disabled variant='secondary' design='outlined'>secondary outlined</Button>
         </div>
 
         <div className='mt-6 flex gap-6 flex-col md:flex-row'>
           <Button loading>primary filled</Button>
           <Button loading variant='secondary'>secondary filled</Button>
-          <Button loading style='outlined'>primary outlined</Button>
-          <Button loading variant='secondary' style='outlined'>secondary outlined</Button>
+          <Button loading design='outlined'>primary outlined</Button>
+          <Button loading variant='secondary' design='outlined'>secondary outlined</Button>
         </div>
 
         <div className='mt-20 grid grid-cols-5 items-center gap-2'>

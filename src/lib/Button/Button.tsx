@@ -3,12 +3,12 @@ import Loader from 'components/Loader';
 import React from 'react';
 
 type Type = 'button' | 'submit';
-type Style = 'filled' | 'outlined';
+type Design = 'filled' | 'outlined';
 type Variant = 'primary' | 'secondary';
 
 interface Props {
   readonly type?: Type;
-  readonly style?: Style;
+  readonly design?: Design;
   readonly loading?: boolean;
   readonly variant?: Variant;
   readonly disabled?: boolean;
@@ -21,12 +21,12 @@ const Button: React.FC<Props> = ({
   children,
   disabled,
   type = 'submit',
-  style = 'filled',
+  design = 'filled',
   variant = 'primary',
 }) => {
 
-  const isFilled = () => style === 'filled';
-  const isOutlined = () => style === 'outlined';
+  const isFilled = () => design === 'filled';
+  const isOutlined = () => design === 'outlined';
   const isPrimary = () => variant === 'primary';
   const isSecondary = () => variant === 'secondary';
 

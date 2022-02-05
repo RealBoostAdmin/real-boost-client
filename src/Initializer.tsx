@@ -17,6 +17,7 @@ const Initializer: React.FC = ({children}) => {
 
     onInit().then();
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   if (!ready) return (
