@@ -6,7 +6,7 @@ import createSagaMiddleware from 'redux-saga';
 import StoreReducer from './store.reducer';
 import {rootSaga} from './store.sagas';
 
-const persistConfig = {key: 'store', storage, whitelist: ['auth', 'games', 'products'],};
+const persistConfig = {key: 'store', storage, whitelist: ['auth', 'games', 'products', 'options', 'extras']};
 
 const sagaMiddleware = createSagaMiddleware();
 

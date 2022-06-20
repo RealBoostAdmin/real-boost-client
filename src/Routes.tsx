@@ -3,6 +3,7 @@ import Layout from 'containers/Layout';
 import Home from 'pages/Home';
 import Dev from './pages/Dev';
 import React from 'react';
+import Game from './pages/Game/Game';
 
 const AppRoutes: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const AppRoutes: React.FC = () => {
 
       <Route path='/' element={<Layout/>}>
         <Route index element={<Home/>}/>
+        <Route path={'/game/:gameName'} element={<Game/>}/>
       </Route>
     </Routes>
   );
